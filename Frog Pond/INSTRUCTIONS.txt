@@ -1,0 +1,23 @@
+o What all the objects on screen are 
+
+Frog (player), flies (multiple), lilypads (multiple), water reeds (multiple), open water (multiple)
+
+o What their behavior is supposed to be 
+
+- Frog - can move left/right and up/down. Can eat flies and will get reskinned after eating enough.
+- Flies - can move on straight lines and diagonals. They will move randomly one square at a time. They spawn randomly on the screen and if not eaten, will disappear in 15 seconds. They cannot fly over water or through reeds. They will not move into the space that the frog is occupying, but they will spawn there sometimes.
+- Lily Pads - lily pads will spawn and despawn randomly in open water patches. Before disappearing, they will shrink for 3 seconds. Both frogs and flies can land on lily pads. If the frog is on the lily pad when it despawns, they will fall in the water.
+- Water Reeds - water reeds will not move, spawn, or despawn. Frogs and flies cannot move through them.
+Open Water: Open water patches are available for lily pads to grow in, and are what's left behind if a lily pad despawns. If the player falls in the water, they will placed back on a random lily pad and lose 4 flies worth of progress.
+
+o What the player’s controls are 
+
+Arrow keys for frog movement
+
+o How the player scores 
+
+Run into (eat) flies. 
+
+o How the game ends, including win/lose conditions
+
+The game never locks you out so you can keep eating flies as long as you want, but once you reach 'Frog Supreme!' there are no more frog skins to unlock. The only way to lose is not to play :) you can't fall in the water and have eaten a negative amount of flies.

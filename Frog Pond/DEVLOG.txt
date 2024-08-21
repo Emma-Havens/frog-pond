@@ -1,0 +1,34 @@
+Nov 8:
+
+Basic idea: You're a frog that is hopping around in a pond. You're trying to catch flies so that you can get bigger.
+MDA: Sensation (game as an art object) and Submission (game as a mindless pastime)
+The player should feel calm while playing and gain an investment in the aesthetics of the frog
+Signs of success:
+	• The player wants to level up so that the frog changes appearance
+	• The player plays for a long time
+Signs of failure:
+	• The player dies often. The game is too hard or they don't care about leveling up the frog
+	• The player spends a lot of time stagnant. There is too much time where they can't do anything
+	• The player does not care what the game is skinned as
+Core Loop: Locate fly. Jump towards fly, navigating reeds and open water. Eat fly. After a critical number of flies, level up. It's engaging because you're doing something and you know how close you are to achieving your goal, but it's not very difficult, and it's monotonous and can be repeated for an extended period of time.
+
+Nov 11:
+Implemented the ability to spawn lily pads. Currently there is no board, but it is able to populate it. The code is now able to find spaces based on a row and column, so that will be an important basis when computing lily pad removal and frog movement.
+
+Nov 12:
+Board now spawns at beginning of game. It does not randomly spawn and despawn pads yet. I created the frog, and it's able to move on lily pads and fall in the water. It is not able to move through the reeds. Flies can spawn but they can't get eaten.
+
+Nov 13:
+Flies can get eaten, and if they are on the board too long they disappear so a different fly can spawn elsewhere. Flies are able to move, and unlike the frog, they are able to move diagonally, as well. They will not move into the player. 
+
+Lily pads can now span and despawn, which continuously changes the board. The player was able to get stuck for too long, so instead of falling into the water and losing all progress, the player will be able to fall into the water and lose some progress but spawn elsewhere, so that's a decision players can make.
+
+Sounds are produced when the frog eats a fly, whether by jumping into it or it may spawn over top of them, and when they fall in the water.
+
+I created the frog sprites in a pixelart generator and implemented the scoreboard to count the number of flies needed to unlock the next frog. Currently it's just a counter, it doesn't actually change the frog skin.
+
+Nov 14:
+Link critical score increase/decreases to changes in the frog skins.
+
+POSTMORTEM:
+I initially set out to make a game that was aesthetically attractive, calming, and mindless and I think that is what I created. I don't think the game is too hard or has too much dead time. I think it makes you feel kind of like a frog. All the sprites and sounds turned out very well, which I think really helped me accomplish my aesthetic goals. I didn't change many of the mechanics after implementation, but there were lots of mechanics that I wanted to implement that I didn't have time for. I'm happy with what I did implement, but I wanted to include some intermovement frames to give it a sort of animatic feel, and I just didn't have time for it. I also wanted the frog leveling up to add mechanics, like at some point the frog would get big enough to go diagonally, or jump over small water patches, and it just didn't happen. I don't think that, doing it over again, I would have done much different, but maybe I would have been able to adjust my expectations better for what I could reasonably produce in the amount of time I had.
